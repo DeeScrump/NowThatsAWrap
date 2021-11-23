@@ -1,5 +1,5 @@
-import React { useState } from 'react';
-import { checkPassword, validateEmail } from '../utils/helpers';
+import React, { useState } from 'react';
+import { validateEmail } from '../utils/helpers';
 
 function Contact() {
 
