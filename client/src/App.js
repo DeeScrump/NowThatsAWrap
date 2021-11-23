@@ -1,5 +1,5 @@
 import About from './components/About';
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 import Events from './components/Events';
 import Contact from './components/Contact';
@@ -7,14 +7,14 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <main>
+      <NavBar />
       <About />
       <Menu />
       <Events />
       <Contact />
       <Footer />
-    </div>
+    </main>
   );
 }
 
