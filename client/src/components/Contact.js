@@ -29,8 +29,8 @@ function Contact() {
       e.preventDefault();
   
       // First we check to see if the email is not valid or if the email is empty. If so we set an error message to be displayed on the page.
-      if (!validateEmail(email) || !name) {
-        setErrorMessage('Email or Name is invalid');
+      if (!validateEmail(email) || !name || !textArea) {
+        setErrorMessage('Name, valid Email, AND Description are required');
         // We want to exit out of this code block if something is wrong so that the user can correct it
         return;
         // Then we check to see if the name is not valid. If so, we set an error message regarding the name.
@@ -50,7 +50,7 @@ function Contact() {
                 <p>Name: </p>
                 <input className='input-group'
                 value={name}
-                name="Name:"
+                name="name"
                 onChange={handleInputChange}
                 type="text"
                 placeholder="Name"
@@ -68,7 +68,7 @@ function Contact() {
                 <p>Description: </p>                    
                 <textarea className='input-group'
                 value={textArea}
-                name="text"
+                name="textArea"
                 onChange={handleInputChange}
                 type="text"
                 placeholder=""
