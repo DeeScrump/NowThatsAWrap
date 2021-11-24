@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
 
-function Events () {
+function Catering() {
 
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -44,7 +44,7 @@ function Events () {
 
     return(
         <div>
-            <h1>Private Event Request</h1>
+            <h1>Catering Request</h1>
 
             <form className="form-control bg-transparent border-0">
                 <p>Name: </p>
@@ -84,4 +84,4 @@ function Events () {
         </div>
     )
 }
-export default Events;
+export default Catering;
