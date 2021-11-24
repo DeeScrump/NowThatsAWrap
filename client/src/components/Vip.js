@@ -14,7 +14,7 @@ function Vip() {
       color:'white',
       textAlign:'center',
       lineHeight: '450px',
-      fontSize: '75px',
+      fontSize: '50px',
     },
     textImage: {
       height: '500px',
@@ -69,7 +69,7 @@ function Vip() {
   return(
     <div>
       <header style={styles.headerPic}>
-        <h1 style={styles.headerText}>VIP Sign Up</h1>
+        <h1 style={styles.headerText}>VIP Sign-Up</h1>
       </header>
 
 

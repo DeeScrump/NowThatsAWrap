@@ -14,7 +14,7 @@ function Catering() {
       color:'white',
       textAlign:'center',
       lineHeight: '450px',
-      fontSize: '75px',
+      fontSize: '50px',
     },
     textImage: {
       height: '500px',
@@ -69,7 +69,7 @@ function Catering() {
   return(
     <div>
       <header style={styles.headerPic}>
-        <h1 style={styles.headerText}>Private Event Request</h1>
+        <h1 style={styles.headerText}>Cater Event</h1>
       </header>
 
 

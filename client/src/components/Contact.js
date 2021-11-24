@@ -14,7 +14,7 @@ function Contact() {
       color:'white',
       textAlign:'center',
       lineHeight: '450px',
-      fontSize: '75px',
+      fontSize: '50px',
     },
     textImage: {
       height: '500px',
