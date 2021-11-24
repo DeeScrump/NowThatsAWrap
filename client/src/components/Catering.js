@@ -73,13 +73,13 @@ function Catering() {
       </header>
 
 
-      <div class="container-fluid">
-          <div class="row my-5 bg-success">
-              <div class="col-md-6">
+      <div className="container-fluid">
+          <div className="row my-5 bg-success">
+              <div className="col-md-6">
                   <h1 className="text-center text-white my-5">WE CAN JOIN YOU AT YOUR NEXT</h1>
                   <p className="text-center text-white">Are you looking to change it up at your next event?  We have many options for you.  Let us be a part of the magic that is your next big function.</p>
               </div>
-              <div class="col-md-6 my-5">
+              <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
                   <p>Name: </p>
                   <input className='input-group'

@@ -73,13 +73,13 @@ function Events() {
       </header>
 
 
-      <div class="container-fluid">
-          <div class="row my-5 bg-warning">
-              <div class="col-md-6">
+      <div className="container-fluid">
+          <div className="row my-5 bg-warning">
+              <div className="col-md-6">
                   <h1 className="text-center text-white my-5">NEED A HOST FOR YOUR NEXT PRIVATE PARTY?</h1>
                   <p className="text-center text-white">Not That's A Wrap has a secluded venue that may be available to host your next private party.  Our venue allows for a great private events both indoor and outdoor experience.  Tell us what your needs are and we will be quick to respond.</p>
               </div>
-              <div class="col-md-6 my-5">
+              <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
                   <p>Name: </p>
                   <input className='input-group'
