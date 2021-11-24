@@ -73,13 +73,13 @@ function Contact() {
       </header>
 
 
-      <div class="container-fluid">
-          <div class="row my-5 bg-danger">
-              <div class="col-md-6">
+      <div className="container-fluid">
+          <div className="row my-5 bg-danger">
+              <div className="col-md-6">
                   <h1 className="text-center text-white my-5">GIVE US FEEDBACK</h1>
                   <p className="text-center text-white"> Please let us know how we are doing, how we may be able to service you better in the future.  Be kind and we will respond at our earliest convenience.  Thank you for your patronage.</p>
               </div>
-              <div class="col-md-6 my-5">
+              <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
                   <p>Name: </p>
                   <input className='input-group'
