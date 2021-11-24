@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
-import mainLogo from '../assets/images/mainlogo.jpg';
+import contactMe from '../assets/images/contactme.jpg';
 
 function Contact() {
 
   const styles = {
     headerPic: {
       height: '500px',
-      backgroundImage: `url(${mainLogo})`,
+      backgroundImage: `url(${contactMe})`,
       backgroundPosition: 'center',
     },
     headerText: {
