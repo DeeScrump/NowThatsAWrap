@@ -12,6 +12,7 @@ function NavBar({ currentPage, handlePageChange }) {
                     <Nav.Link className={ currentPage === 'about' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('about')}><h3 className="mx-lg-4">About</h3></Nav.Link>
                     <Nav.Link className={ currentPage === 'menu' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('menu')}><h3 className="mx-lg-4">Menu</h3></Nav.Link>
                     <Nav.Link className={ currentPage === 'events' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('events')}><h3 className="mx-lg-4">Private Events</h3></Nav.Link>
+                    <Nav.Link className={ currentPage === 'catering' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('catering')}><h3 className="mx-lg-4">Catering Requests</h3></Nav.Link>
                     <Nav.Link className={ currentPage === 'contact' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('contact')}><h3 className="mx-lg-4">Contact</h3></Nav.Link>            
                 </Nav>
             </Navbar.Collapse>

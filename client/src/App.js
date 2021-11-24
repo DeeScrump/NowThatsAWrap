@@ -4,6 +4,7 @@ import Menu from './components/Menu';
 import NavBar from './components/NavBar';
 import Events from './components/Events';
 import Contact from './components/Contact';
+import Catering from './components/Catering';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         return <Menu />;
       case 'events':
         return <Events />;
+      case 'catering':
+        return <Catering />;        
       case 'contact':
         return <Contact />
       default:

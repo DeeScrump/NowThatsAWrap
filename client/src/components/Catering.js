@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
-import contactMe from '../assets/images/contactme.jpg';
+import cateringEvent from '../assets/images/cateringevent.jpg';
 
-function Contact() {
+function Catering() {
 
   const styles = {
     headerPic: {
       height: '500px',
-      backgroundImage: `url(${contactMe})`,
+      backgroundImage: `url(${cateringEvent})`,
       backgroundPosition: 'center',
     },
     headerText: {
@@ -69,15 +69,15 @@ function Contact() {
   return(
     <div>
       <header style={styles.headerPic}>
-        <h1 style={styles.headerText}>Contact Me</h1>
+        <h1 style={styles.headerText}>Private Event Request</h1>
       </header>
 
 
       <div class="container-fluid">
-          <div class="row my-5 bg-danger">
+          <div class="row my-5 bg-success">
               <div class="col-md-6">
-                  <h1 className="text-center text-white my-5">GIVE US FEEDBACK</h1>
-                  <p className="text-center text-white"> Please let us know how we are doing, how we may be able to service you better in the future.  Be kind and we will respond at our earliest convenience.  Thank you for your patronage.</p>
+                  <h1 className="text-center text-white my-5">WE CAN JOIN YOU AT YOUR NEXT</h1>
+                  <p className="text-center text-white">Are you looking to change it up at your next event?  We have many options for you.  Let us be a part of the magic that is your next big function.</p>
               </div>
               <div class="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
@@ -123,4 +123,4 @@ function Contact() {
     </div>
   )
 }
-export default Contact;
+export default Catering;
