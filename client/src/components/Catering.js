@@ -74,7 +74,7 @@ function Catering() {
 
 
       <div class="container-fluid">
-          <div class="row my-5 bg-warning">
+          <div class="row my-5 bg-success">
               <div class="col-md-6">
                   <h1 className="text-center text-white my-5">WE CAN JOIN YOU AT YOUR NEXT</h1>
                   <p className="text-center text-white">Are you looking to change it up at your next event?  We have many options for you.  Let us be a part of the magic that is your next big function.</p>
