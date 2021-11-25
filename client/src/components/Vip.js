@@ -72,8 +72,8 @@ function Vip() {
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName('');
-    setPassword('');
     setEmail('');
+    setPassword('');
   };
 
   return(
@@ -122,7 +122,7 @@ function Vip() {
                 </form>
                 {errorMessage && (
                   <div>
-                  <p className="error-text">{errorMessage}</p>
+                  <p style={styles.formText} className="error-text">{errorMessage}</p>
                   </div>
                 )}
               </div>

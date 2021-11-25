@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderPic from '../assets/images/aboutHeader.jpg';
-import Pic1 from '../assets/images/aboutPic1.jpg';
+import Pic1 from '../assets/images/chefHaiven.jpg';
 import Pic2 from '../assets/images/patioImage.jpg';
 import Pic3 from '../assets/images/poster.jpg';
 import Pic4 from '../assets/images/logo.jpg';
@@ -27,6 +27,12 @@ function About() {
             height: '500px',
             width: '100%',
             border: '15px solid #88c53c',
+        },
+        aboutText: {
+            color:'white',
+            textAlign:'center',
+            fontSize: '50px',
+            padding: 'none',
         }
       }
     return(
@@ -39,8 +45,19 @@ function About() {
             <div className="container-fluid">
                 <div className="row my-5 bg-danger">
                     <div className="col-md-6">
-                        <h1 className="text-center text-white my-5">Catchy Title</h1>
-                        <p className="text-center text-white"> Discription Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h2 style={styles.aboutText} className="text-center text-white mt-5">Haiven A. Kornbluth</h2>
+                        <h3 className="text-center text-white mb-5">Executive Chef/Owner</h3>
+
+                        <p className="text-center text-white">Haiven Antoin Kornbluth is the culinary genius behind the movement of Now That's A Wrap. He is a culinary visionary that has traveled and explored diverse dynamics within the culinary world. With a vigorous six years in the restaurant industry, he knew that his style, technique and vision was too untamed for a typical restaurant. Although he pays homage to every skill and lesson developed by his mentors, he knew it was time to venture off on his own in 2016. He took a simple concept of a healthy wrap and added the "Haiven" flavor to each bite. His business, Now That’s A Wrap, became a product worth buzzin about. While building his business from the ground, he was able to complete his culinary education at the elite <span STYLE="font-weight:bold">Auguste Escoffier Culinary Arts School</span>, earning his Culinary Arts Diploma in 2018 and Associates of Science Degree In Culinary Arts 2020.</p>
+                        <br></br>
+                        <p className="text-center text-white">
+                        Born in Miami, Florida, Chef Haiven’s first experience with food began with cooking in the kitchen with his grandparents who taught him to truly enjoy the creative process of cooking. Chef's culinary inspiration comes from his passion for cooking and uniting people for a unique experience. 
+                        </p>
+                        <br></br>
+                        <p className="text-center text-white">
+                        Chef Haiven has never been afraid of experimenting with various cuisines and finds joy in transforming basic dishes into the extra-ordinary. 
+                        </p> 
+ 
                     </div>
                     <div className="col-md-6 my-5">
                         <img style={styles.textImage} src={Pic1} alt="Delicious wrap" />
