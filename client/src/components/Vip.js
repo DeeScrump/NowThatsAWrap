@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { validateEmail } from '../utils/helpers';
+import { validateEmail, checkPassword } from '../utils/helpers';
 import mainLogo from '../assets/images/logo.jpg';
 
 function Vip() {
@@ -24,12 +24,15 @@ function Vip() {
       height: '500px',
       width: '100%',
       border: '15px solid #88c53c',
+    },
+    formText: {
+      color: 'white',
     }
   }
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [textArea, setTextArea] = useState('');
+  const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
@@ -44,7 +47,7 @@ function Vip() {
     } else if (inputType === 'name') {
       setName(inputValue);
     } else {
-      setTextArea(inputValue);
+      setPassword(inputValue);
     }
   };
 
@@ -53,16 +56,23 @@ function Vip() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the email is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !name || !textArea) {
-      setErrorMessage('Name, valid Email, AND Description are required');
+    if (!validateEmail(email) || !name) {
+      setErrorMessage('Name and valid email are required');
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
-      // Then we check to see if the name is not valid. If so, we set an error message regarding the name.
     }
+      // Then we check to see if the name is not valid. If so, we set an error message regarding the name.
+    if (!checkPassword(password)) {
+      setErrorMessage(
+        `Choose a more secure password for the account: ${name}`
+      );
+      return;      
+    }
+    alert(`Hello,${name}, welcome to the VIP Members site`)
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName('');
-    setTextArea('');
+    setPassword('');
     setEmail('');
   };
 
@@ -81,7 +91,7 @@ function Vip() {
               </div>
               <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
-                  <p>Name: </p>
+                  <p style={styles.formText}>Name: </p>
                   <input className='input-group'
                   value={name}
                   name="name"
@@ -90,7 +100,7 @@ function Vip() {
                   placeholder="Name"
                   />
                   <br></br>
-                  <p>Email: </p>
+                  <p style={styles.formText}>Email: </p>
                   <input className='input-group'
                   value={email}
                   name="email"
@@ -99,16 +109,16 @@ function Vip() {
                   placeholder="Email"
                   />
                   <br></br>
-                  <p>Description: </p>                    
-                  <textarea className='input-group'
-                  value={textArea}
-                  name="textArea"
+                  <p style={styles.formText}>Password: </p>                    
+                  <input className='input-group'
+                  value={password}
+                  name="password"
                   onChange={handleInputChange}
-                  type="text"
-                  placeholder=""
+                  type="password"
+                  placeholder="Password"
                   />
                   <br></br>
-                  <button type="button" onClick={handleFormSubmit}>Submit</button>
+                  <button type="button" onClick={handleFormSubmit}>Sign-In</button>
                 </form>
                 {errorMessage && (
                   <div>

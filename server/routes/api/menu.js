@@ -2,7 +2,7 @@ const router = require('express').Router();
 const menuController = require('../../controllers/menuController');
 
 // import middleware
-const { authMiddleware } = require('../../utils/auth');
+const { authMiddleware } = require('../../../client/src/utils/auth');
 
 // matches with "/api/menu"
 router.route('/').get(menuController.findAll);

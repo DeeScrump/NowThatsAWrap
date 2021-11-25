@@ -24,6 +24,9 @@ function Events() {
       height: '500px',
       width: '100%',
       border: '15px solid #88c53c',
+    },
+    formText: {
+      color: 'white',
     }
   }
 
@@ -81,7 +84,7 @@ function Events() {
               </div>
               <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
-                  <p>Name: </p>
+                  <p style={styles.formText}>Name: </p>
                   <input className='input-group'
                   value={name}
                   name="name"
@@ -90,7 +93,7 @@ function Events() {
                   placeholder="Name"
                   />
                   <br></br>
-                  <p>Email: </p>
+                  <p style={styles.formText}>Email: </p>
                   <input className='input-group'
                   value={email}
                   name="email"
@@ -99,7 +102,7 @@ function Events() {
                   placeholder="Email"
                   />
                   <br></br>
-                  <p>Description: </p>                    
+                  <p style={styles.formText}>Description: </p>                    
                   <textarea className='input-group'
                   value={textArea}
                   name="textArea"
