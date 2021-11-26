@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { validateEmail } from '../utils/helpers';
-import privateEvent from '../assets/images/privateevent.jpg';
+import { validateEmail, checkPassword } from '../utils/helpers';
+import mainLogo from '../assets/images/logo.jpg';
 
-function Events() {
+function Vip() {
 
   const styles = {
     headerPic: {
       height: '500px',
-      backgroundImage: `url(${privateEvent})`,
+      backgroundImage: `url(${mainLogo})`,
       backgroundPosition: 'center',
     },
     headerText: {
-      color:'limegreen',
+      color:'white',
       textAlign:'center',
       lineHeight: '450px',
       fontSize: '50px',
@@ -32,7 +32,7 @@ function Events() {
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [textArea, setTextArea] = useState('');
+  const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
@@ -47,7 +47,7 @@ function Events() {
     } else if (inputType === 'name') {
       setName(inputValue);
     } else {
-      setTextArea(inputValue);
+      setPassword(inputValue);
     }
   };
 
@@ -56,31 +56,38 @@ function Events() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the email is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !name || !textArea) {
-      setErrorMessage('Name, valid Email, AND Description are required');
+    if (!validateEmail(email) || !name) {
+      setErrorMessage('Name and valid email are required');
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
-      // Then we check to see if the name is not valid. If so, we set an error message regarding the name.
     }
+      // Then we check to see if the name is not valid. If so, we set an error message regarding the name.
+    if (!checkPassword(password)) {
+      setErrorMessage(
+        `Choose a more secure password for the account: ${name}`
+      );
+      return;      
+    }
+    alert(`Hello,${name}, welcome to the VIP Members site`)
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setName('');
-    setTextArea('');
     setEmail('');
+    setPassword('');
   };
 
   return(
     <div>
       <header style={styles.headerPic}>
-        <h1 style={styles.headerText}>Private Event</h1>
+        <h1 style={styles.headerText}>VIP Sign-Up</h1>
       </header>
 
 
       <div className="container-fluid">
-          <div className="row my-5 bg-warning">
+          <div className="row my-5 bg-dark">
               <div className="col-md-6">
-                  <h1 className="text-center text-white my-5">NEED A HOST FOR YOUR NEXT PRIVATE PARTY?</h1>
-                  <p className="text-center text-white">Not That's A Wrap has a secluded venue that may be available to host your next private party.  Our venue allows for a great private events both indoor and outdoor experience.  Tell us what your needs are and we will be quick to respond.</p>
+                  <h1 className="text-center text-white my-5">STAY UP-TO-DATE ON THE LATEST NEWS & EVENTS</h1>
+                  <p className="text-center text-white">Become a VIP member and be able to rate your favorite menu items, add reviews and comments. Receive emails about special offers and events.</p>
               </div>
               <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
@@ -102,20 +109,20 @@ function Events() {
                   placeholder="Email"
                   />
                   <br></br>
-                  <p style={styles.formText}>Description: </p>                    
-                  <textarea className='input-group'
-                  value={textArea}
-                  name="textArea"
+                  <p style={styles.formText}>Password: </p>                    
+                  <input className='input-group'
+                  value={password}
+                  name="password"
                   onChange={handleInputChange}
-                  type="text"
-                  placeholder=""
+                  type="password"
+                  placeholder="Password"
                   />
                   <br></br>
-                  <button type="button" onClick={handleFormSubmit}>Submit</button>
+                  <button type="button" onClick={handleFormSubmit}>Sign-In</button>
                 </form>
                 {errorMessage && (
                   <div>
-                  <p className="error-text">{errorMessage}</p>
+                  <p style={styles.formText} className="error-text">{errorMessage}</p>
                   </div>
                 )}
               </div>
@@ -126,4 +133,4 @@ function Events() {
     </div>
   )
 }
-export default Events;
+export default Vip;

@@ -14,7 +14,7 @@ function Catering() {
       color:'white',
       textAlign:'center',
       lineHeight: '450px',
-      fontSize: '75px',
+      fontSize: '50px',
     },
     textImage: {
       height: '500px',
@@ -24,6 +24,9 @@ function Catering() {
       height: '500px',
       width: '100%',
       border: '15px solid #88c53c',
+    },
+    formText: {
+      color: 'white',
     }
   }
 
@@ -69,7 +72,7 @@ function Catering() {
   return(
     <div>
       <header style={styles.headerPic}>
-        <h1 style={styles.headerText}>Private Event Request</h1>
+        <h1 style={styles.headerText}>Cater Event</h1>
       </header>
 
 
@@ -81,7 +84,7 @@ function Catering() {
               </div>
               <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
-                  <p>Name: </p>
+                  <p style={styles.formText}>Name: </p>
                   <input className='input-group'
                   value={name}
                   name="name"
@@ -90,7 +93,7 @@ function Catering() {
                   placeholder="Name"
                   />
                   <br></br>
-                  <p>Email: </p>
+                  <p style={styles.formText}>Email: </p>
                   <input className='input-group'
                   value={email}
                   name="email"
@@ -99,7 +102,7 @@ function Catering() {
                   placeholder="Email"
                   />
                   <br></br>
-                  <p>Description: </p>                    
+                  <p style={styles.formText}>Description: </p>                    
                   <textarea className='input-group'
                   value={textArea}
                   name="textArea"

@@ -6,6 +6,7 @@ import Events from './components/Events';
 import Contact from './components/Contact';
 import Catering from './components/Catering';
 import Footer from './components/Footer';
+import Vip from './components/Vip';
 
 function App() {
 
@@ -22,7 +23,9 @@ function App() {
       case 'catering':
         return <Catering />;        
       case 'contact':
-        return <Contact />
+        return <Contact />;
+      case 'vip':
+        return <Vip />;
       default:
         return <About />;
     }
