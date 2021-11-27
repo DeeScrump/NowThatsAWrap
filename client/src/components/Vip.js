@@ -34,7 +34,8 @@ function Vip() {
   }
 
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -45,10 +46,12 @@ function Vip() {
     const inputValue = target.value;
 
     // Based on the input type, we set the state of either email, name, and textarea
-    if (inputType === 'email') {
-      setEmail(inputValue);
-    } else if (inputType === 'name') {
-      setName(inputValue);
+    if (inputType === 'firstName') {
+      setFirstName(inputValue);
+    } else if (inputType === 'lastName') {
+      setLastName(inputValue);
+    } else if (inputType === 'email') {
+        setEmail(inputValue);
     } else {
       setPassword(inputValue);
     }
@@ -59,22 +62,28 @@ function Vip() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the email is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !name) {
-      setErrorMessage('Name and valid email are required');
+    if (!firstName || !lastName) {
+      setErrorMessage('Please enter both first and last name!');
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+    }
+    if (!validateEmail(email)) {
+      setErrorMessage('A valid email is required!');
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
     }
       // Then we check to see if the name is not valid. If so, we set an error message regarding the name.
     if (!checkPassword(password)) {
       setErrorMessage(
-        `Choose a more secure password for the account: ${name}`
+        `${firstName}, please choose a more secure password for the account!`
       );
       return;      
     }
-    alert(`Hello,${name}, welcome to the VIP Members site`)
+    alert(`Hello,${firstName} ${lastName}, welcome to the VIP Members site`)
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setName('');
+    setFirstName('');
+    setLastName('');
     setEmail('');
     setPassword('');
   };
@@ -94,13 +103,22 @@ function Vip() {
               </div>
               <div className="col-md-6 my-5">
                 <form className="form-control bg-transparent border-0">
-                  <p style={styles.formText}>Name: </p>
+                  <p style={styles.formText}>First Name: </p>
                   <input className='input-group'
-                  value={name}
-                  name="name"
+                  value={firstName}
+                  name="firstName"
                   onChange={handleInputChange}
                   type="text"
-                  placeholder="Name"
+                  placeholder="First Name"
+                  />
+                  <br></br>
+                  <p style={styles.formText}>Last Name: </p>
+                  <input className='input-group'
+                  value={lastName}
+                  name="lastName"
+                  onChange={handleInputChange}
+                  type="text"
+                  placeholder="Last Name"
                   />
                   <br></br>
                   <p style={styles.formText}>Email: </p>
