@@ -11,11 +11,14 @@ function Catering() {
       backgroundPosition: 'center',
     },
     headerText: {
+      height: '100%',
       color:'white',
       textAlign:'center',
-      lineHeight: '450px',
-      fontSize: '50px',
-    },
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: '75px',
+  },
     textImage: {
       height: '500px',
       width: '100%',
@@ -72,7 +75,7 @@ function Catering() {
   return(
     <div>
       <header style={styles.headerPic}>
-        <h1 style={styles.headerText}>Cater Event</h1>
+        <h1 style={styles.headerText}>Catering Event Requests</h1>
       </header>
 
 
