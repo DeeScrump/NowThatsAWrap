@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
 const homeRoutes = require('./');
-const aboutRoutes = require('./about');
+//const aboutRoutes = require('./about');
 const menuRoutes = require('./menu');
-const reviewsRoutes = require('./menu/:id/reviews');
-const eventRoutes = require('./event');
-const contactRoutes = require('./contact');
-const cateringRoutes = require('./catering');
+//const reviewsRoutes = require('./menu/:id/reviews');
+//const eventRoutes = require('./event');
+//const contactRoutes = require('./contact');
+//const cateringRoutes = require('./catering');
 
 router.use('/', homeRoutes);
 router.use('/about', aboutRoutes);
