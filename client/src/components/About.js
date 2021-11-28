@@ -4,6 +4,8 @@ import Pic1 from '../assets/images/chefHaiven.jpg';
 import Pic2 from '../assets/images/patioImage.jpg';
 import Pic3 from '../assets/images/poster.jpg';
 import Pic4 from '../assets/images/logo.jpg';
+import Pic5 from '../assets/images/NTAW BusinessCard1.jpg';
+import Pic6 from '../assets/images/NTAW BusinessCard2.jpg';
 
 
 function About() {
@@ -14,18 +16,21 @@ function About() {
             backgroundPosition: 'center',
         },
         headerText: {
+            height: '100%',
             color:'white',
             textAlign:'center',
-            lineHeight: '450px',
-            fontSize: '50px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '75px',
         },
         textImage: {
-            height: '500px',
-            width: '100%',
+            maxHeight: '100%',
+            maxWidth: '100%',
         },
         images: {
-            height: '500px',
-            width: '100%',
+            maxHeight: '100%',
+            maxWidth: '100%',
             border: '15px solid #88c53c',
         },
         aboutText: {
@@ -33,6 +38,11 @@ function About() {
             textAlign:'center',
             fontSize: '50px',
             padding: 'none',
+        },
+        evenOut: {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
         }
       }
     return(
@@ -44,7 +54,7 @@ function About() {
 
             <div className="container-fluid">
                 <div className="row my-5 bg-danger">
-                    <div className="col-md-6">
+                    <div className="col-md-6 align-content-center">
                         <h2 style={styles.aboutText} className="text-center text-white mt-5">Haiven A. Kornbluth</h2>
                         <h3 className="text-center text-white mb-5">Executive Chef/Owner</h3>
 
@@ -64,14 +74,16 @@ function About() {
                     </div>
                 </div>
                 <div className="row bg-warning">
-                    <div className="col-md-4 my-5">
+                    <div className="col-md-4 my-5 d-flex" style={styles.evenOut}>
                         <img style={styles.images} src={Pic2} alt="Patio" />
+                        <img style={styles.images} src={Pic5} alt="Logo" />
                     </div>
                     <div className="col-md-4 my-5">
                         <img style={styles.images} src={Pic3} alt="Poster" />
                     </div>
-                    <div className="col-md-4 my-5">
-                        <img style={styles.images} src={Pic4} alt="Logo" />
+                    <div className="col-md-4 my-5" style={styles.evenOut}>
+                        <img style={styles.images} src={Pic6} alt="Logo" />
+                        <img style={styles.images} src={Pic4} alt="Patio" />
                     </div>
                 </div>
             </div>

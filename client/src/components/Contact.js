@@ -11,11 +11,14 @@ function Contact() {
       backgroundPosition: 'center',
     },
     headerText: {
+      height: '100%',
       color:'white',
       textAlign:'center',
-      lineHeight: '450px',
-      fontSize: '50px',
-    },
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: '75px',
+  },
     textImage: {
       height: '500px',
       width: '100%',
@@ -72,7 +75,7 @@ function Contact() {
   return(
     <div>
       <header style={styles.headerPic}>
-        <h1 style={styles.headerText}>Contact Me</h1>
+        <h1 style={styles.headerText}>Contact Us</h1>
       </header>
 
 
