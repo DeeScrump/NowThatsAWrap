@@ -1,10 +1,10 @@
-export const BreakfastQuesadillas = [
+const BreakfastQuesadillas = [
     {
       id: 1,
       title: 'Bacon, Egg and Cheese',
       category: 'breakfast',
       price: 13.00,
-      img: '../../assets/images/IMG-20211122-WA0037.jpg',
+      img: '/client/src/assets/images/IMG-20211122-WA0037.jpg',
       desc: `Crispy Bacon Slices, shredded Provolone & Mozzarella cheese, Scrambled Eggs and Chipotle Ranch Sauce`,
     },
     {
@@ -12,7 +12,7 @@ export const BreakfastQuesadillas = [
       title: 'Chicken, Egg and Cheese',
       category: 'breakfast',
       price: 13.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: '/client/src/assets/images/IMG-20211122-WA0037.jpg',
       desc: `Grilled Chicken Breast, shredded Provolone & Mozzarella cheese, Scrambled Eggs and Chipotle Ranch Sauce`,
     },
     {
@@ -40,3 +40,5 @@ export const BreakfastQuesadillas = [
       desc: `USDA Choice Steak, sauteed onions, peppers and mushrooms with shredded Provolone & Mozzarella cheese, Scrambled Eggs and Chipotle Ranch Sauce`,
     },
   ];
+
+export default BreakfastQuesadillas;

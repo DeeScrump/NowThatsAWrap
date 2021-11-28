@@ -1,0 +1,54 @@
+.menu-card-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 40px; 
+    margin-bottom: 32px;
+}
+
+.menu-title {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px; 
+    color: blue;
+}
+
+.menu-section {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px; 
+    padding-bottom: 8px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.menu-body {
+    text-decoration: none;
+}
+
+@media (max-width: 600px ) {
+    .menu-card-list {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* APP STAR RATING */
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+input [type="radio"] {
+    display: none;
+}
+
+.star {
+    cursor: pointer; 
+    transition: color 200ms;
+}
