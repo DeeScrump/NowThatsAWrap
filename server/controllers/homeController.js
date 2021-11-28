@@ -1,3 +1,4 @@
+
 const home = {
     getHome: async function(req, res) {
        try{
@@ -10,3 +11,4 @@ const home = {
   }
   }
   module.exports = home;
+

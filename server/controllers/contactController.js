@@ -1,3 +1,4 @@
+
 const contact = {
     getContact: async function(req, res) {
        try{

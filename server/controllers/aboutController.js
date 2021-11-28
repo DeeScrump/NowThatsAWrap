@@ -1,4 +1,5 @@
 
+
 const about = {
   getAbout: async function(req, res) {
      try{
@@ -11,3 +12,4 @@ const about = await req.body;
 }
 }
 module.exports = about;
+

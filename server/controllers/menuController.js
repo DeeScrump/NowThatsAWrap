@@ -1,3 +1,4 @@
+
 // import user model
 const { Menu } = require('../models');
 
@@ -5,7 +6,7 @@ menu = {
   // get a menu page with all menu items
   getMenu: async function(req, res) {
     const fullMenu = await Menu.find({
-      
+ 
     });
 
     if (!fullMenu) {
@@ -38,3 +39,4 @@ menu = {
 }
 
 module.exports = menu;
+
