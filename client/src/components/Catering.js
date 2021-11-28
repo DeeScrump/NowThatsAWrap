@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
-import cateringEvent from '../assets/images/cateringevent.jpg';
+import cateringEvent from '../assets/images/cateringevent2.jpg';
 
 function Catering() {
 

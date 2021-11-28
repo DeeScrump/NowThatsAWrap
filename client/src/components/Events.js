@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
-import privateEvent from '../assets/images/privateevent.jpg';
+import privateEvent from '../assets/images/privateevent2.jpg';
 
 function Events() {
 
