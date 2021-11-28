@@ -1,7 +1,6 @@
-
 const express = require('express');
 const router = express.Router();
-const menuControls  = require('../../controllers/menuController');
+const menuControls  = require('../controllers/menuController');
 
 // const { 
 //     getMenu, 

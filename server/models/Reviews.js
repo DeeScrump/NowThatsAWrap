@@ -6,7 +6,7 @@ let reviewSchema = new Schema(
         text: {
             type: String
         },
-        menu: {
+        menu_id: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Menu'
         }
