@@ -1,27 +1,39 @@
-const { Review } = require('../models');
+
+const express = require('express');
+const mongoose = require('mongoose');
+
+const { Reviews } = require('../models/Reviews');
+
+const router = express.Router();
+
 
 module.exports = {
 
 // get all reviews
-async getReview(req, res) {
-    const allReview = await Review.findAll({
-        
-});
-if(!allReview){
+async getReviews(req, res) {
+  try{
+    const allReviews = await Reviews.findAll({});
+    res.status(200).json(allReviews);
+  } catch (error) {
+    res.status(400).json({ message: 'Cannot find review!'});
+  }
+if(!allReviews){
     return res.status(400).json({ message: 'Cannot find review!'});
 }
-res.json(allReview);
+
 },
 
  //  create review
   async postReview({ body }, res) {
-    const review = await Review.create(body);
 
-    if (!review) {
+    const reviews = await Reviews.create(body);
+
+    if (!reviews) {
       return res.status(400).json({ message: 'Something is wrong!' });
     }
     
-    res.json(review);
+    res.json(reviews);
+
   },
 
   
