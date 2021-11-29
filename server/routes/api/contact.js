@@ -1,10 +1,10 @@
-const router = require('express').Router();
-const contactController = require('../../controllers/contactController');
+const express = require('express');
+//import express from 'express';
+const  contactControls  = require('../../controllers/contactController');
+//import { about } from '../controllers/aboutController';
+const router = express.Router();
 
-// import middleware
-const { authMiddleware } = require('../../utils/auth');
+router.route('/').get(contactControls.getContact);
 
-// matches with "/api/contact"
-router.route('/contact').get(contactController.findAll);
-
+//export default router;
 module.exports = router;

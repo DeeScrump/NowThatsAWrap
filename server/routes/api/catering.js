@@ -1,10 +1,10 @@
-const router = require('express').Router();
-const cateringController = require('../../controllers/cateringController');
+const express = require('express');
+//import express from 'express';
+const  cateringControls  = require('../../controllers/cateringController');
 
-// import middleware
-const { authMiddleware } = require('../../utils/auth');
+const router = express.Router();
 
-// matches with "/api/catering"
-router.route('/catering').get(cateringController);
+router.route('/').get(cateringControls.getCatering);
 
+//export default router;
 module.exports = router;

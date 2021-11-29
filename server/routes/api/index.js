@@ -1,22 +1,21 @@
-
-
- const express = require('express');
+const express = require('express');
  const router = express.Router();
-//const homeRoutes = require('./');
 
+const homeRoutes = require('./home');
+const aboutRoutes = require('./about');
 const menuRoutes = require('./menu');
-//const eventRoutes = require('./event');
-//const contactRoutes = require('./contact');
-//const cateringRoutes = require('./catering');
+const eventRoutes = require('./event');
+const contactRoutes = require('./contact');
+const cateringRoutes = require('./catering');
 //const reviewsRoutes = require('./menu/:id/reviews');
 
-//router.use('/', homeRoutes);
-
+router.use('/home', homeRoutes);
+router.use('/about', aboutRoutes);
 router.use('/menu', menuRoutes);
 //router.use('/menu/:id/reviews', reviewsRoutes);
-//router.use('./event', eventRoutes);
-//router.use('/contact', contactRoutes);
-//router.use('/catering', cateringRoutes);
+router.use('/event', eventRoutes);
+router.use('/contact', contactRoutes);
+router.use('/catering', cateringRoutes);
 
 module.exports = router;
 
