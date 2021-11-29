@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Catering from './components/Catering';
 import Footer from './components/Footer';
 import Vip from './components/Vip';
-import StarRating from './components/StarRating';
+//import StarRating from './components/StarRating';
 
 function App() {
 
@@ -39,7 +39,7 @@ function App() {
     <main>
       <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
-      <StarRating />
+     {/*<StarRating />*/}
       <Footer />
     </main>
   );
