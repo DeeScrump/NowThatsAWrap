@@ -10,6 +10,7 @@ import Vip from './components/Vip';
 import Online from './components/Online';
 // import StarRating from './components/StarRating';
 
+
 function App() {
 
   const [currentPage, setCurrentPage] = useState('about');
