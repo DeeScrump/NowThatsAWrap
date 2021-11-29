@@ -17,6 +17,7 @@ const menu = [
         image: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
         price: 13.00,
         category: 'breakfast',
+        reviews: " asdfghhdh",
         //alcohol: false,
        // vegan: true, 
       },

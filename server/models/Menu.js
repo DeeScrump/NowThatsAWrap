@@ -22,11 +22,10 @@ const menuSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Category',
   },
-  
-    // reviews: {
-    //   type: String,
-    //   ref: 'Review'
-    // }
+  reviews: {
+      type: String,
+      ref: 'Review'
+    }
     
 });
 
