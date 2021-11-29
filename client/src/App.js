@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import NavBar from './components/NavBar';
 import About from './components/About';
 import Menu from './components/Menu';
-import NavBar from './components/NavBar';
+import Online from './components/Online';
 import Events from './components/Events';
 import Contact from './components/Contact';
 import Catering from './components/Catering';
-import Footer from './components/Footer';
 import Vip from './components/Vip';
-
+import Footer from './components/Footer';
 // import StarRating from './components/StarRating';
 
 function App() {
@@ -44,11 +44,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/about" component={About} />
-          <Route path="/about" component={About} />
-          <Route path="/menu" component={Menu}/>
-          <Route path="/events.js" component={Events} />
-          <Route path="/catering.js" component={Catering} />
-          <Route path="/contact.js" component={Contact} />
+          <Route path="/About" component={About} />
+          <Route path="/Menu" component={Menu} />
+          <Route path="/Online" component={Online} />
+          <Route path="/Events" component={Events} />
+          <Route path="/Catering" component={Catering} />
+          <Route path="/Contact" component={Contact} />
           <Route path="/Vip.js" component={Vip} />
         </Routes>
         <Footer />
