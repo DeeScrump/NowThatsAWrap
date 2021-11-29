@@ -49,6 +49,7 @@ function App() {
           <Route path="/events.js" component={Events} />
           <Route path="/catering.js" component={Catering} />
           <Route path="/contact.js" component={Contact} />
+          <Route path="/Vip.js" component={Vip} />
         </Routes>
         <Footer />
       </div>
