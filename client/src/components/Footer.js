@@ -2,7 +2,7 @@ import React from "react";
 import {SiFacebook, SiInstagram,SiTwitter,SiYoutube} from 'react-icons/si';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
-const FooterPagePro = () => {
+const Footer = () => {
   return (
     <MDBFooter color="bg-dark" className="font-small text-white lighten-3 pt-4 mt-4">
       <MDBContainer className="text-center text-md-left">
@@ -40,21 +40,21 @@ const FooterPagePro = () => {
             </h5>
             
             <div className="mt-2 ">
-            <a type="button" className="btn-floating btn-small btn-tw">
+
             <a href="https://www.facebook.com/nowthatsawrap2016/" target="_blank" rel="noopenner noreferrer">< SiFacebook /></a>
-            </a>
+
             <br/>
-              <a type="button" className="btn-floating btn-small btn-tw">
+
               <a href="https://www.instagram.com/now_thatsawrap/?hl=en" target="_blank" rel="noopenner noreferrer"><SiInstagram/></a>
-              </a>
+
               <br/>
-              <a type="button" className="btn-floating btn-small btn-gplus">
+
               <a href="https://twitter.com/now_thatsawrap?s=11" target="_blank" rel="noopenner noreferrer"><SiTwitter/></a>
-              </a>
+
               <br/>
-              <a type="button" className="btn-floating btn-small btn-dribbble">
+
               <a href="https://www.youtube.com/channel/UCMSSMKY1XTU2ExN-dkN5zAA" target="_blank" rel="noopenner noreferrer"><SiYoutube/></a>
-              </a>
+
             </div>
           </MDBCol>
           
@@ -64,11 +64,11 @@ const FooterPagePro = () => {
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a> Now That's A Wrap </a>
+          Now That's A Wrap
         </MDBContainer>
       </div>
     </MDBFooter>
   );
 }
 
-export default FooterPagePro;
+export default Footer;
