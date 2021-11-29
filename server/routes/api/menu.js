@@ -15,10 +15,10 @@ const menuControls  = require('../../controllers/menuController');
 //const { authMiddleware } = require('../../utils/auth');
 
 // matches with "/api/menu"
-router.route('/menu').get(menuControls.getMenu);
+router.route('/').get(menuControls.getMenu);
 
 // matches with "/api/menu/:id"
-router.route('/menu/:id').get(menuControls.getSingleMenu);
+router.route('/:id').get(menuControls.getSingleMenu);
 // router.route("/menu/:menuId").post(postReview);
 // router.route("/menu/:menuId").put(updateReview);
 // router.route("/menu/:menuId").delete(deleteReview);
