@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { FaStar } from 'react-icons/fa';
+//import React, { useState } from 'react';
+//import { FaStar } from 'react-icons/fa';
 
-const StarRating = () => {
+{/*const StarRating = () => {
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
 
     return (
         <div>
             {/* iterate array  */}
-            {[ ...Array(5)].map((star, i) => {
-                const ratingValue = i + 1;
+           {/*} {[ ...Array(5)].map((star, i) => {
+                const ratingValue = i + 1; 
 
                 return (
                 <label>
@@ -22,9 +22,15 @@ const StarRating = () => {
                         onMouseLeave={() => setHover(null)}
                     />
                     <FaStar className="star" 
+<<<<<<< Updated upstream
                       
                         color={ratingValue <- (hover || rating ? "#ffc107" : "#e4e5e9")}
                         size={100}
+=======
+                        {/* <- this should be greater than less than  */}
+                        {/*color={ratingValue <- (hover || rating ? "#ffc107" : "#e4e5e9"}
+                        size={100} 
+>>>>>>> Stashed changes
                     />
                 </label>
                 );
@@ -38,4 +44,4 @@ export default StarRating
 
 
 // npm i react-star-rating-component
-// npm i react-icons
+// npm i react-icons*/}
