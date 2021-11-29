@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { validateEmail, checkPassword } from '../utils/helpers';
 import mainLogo from '../assets/images/logo.jpg';
+const mailchimp = require('@mailchimp/mailchimp_marketing');
+
+mailchimp.setConfig({
+  apiKey: 'YOUR_API_KEY',
+  server: 'YOUR_SERVER_PREFIX',
+});
+
+async function callPing() {
+  const response = await mailchimp.ping.get();
+  console.log(response);
+}
+
+callPing();
+
 
 function Vip() {
 
