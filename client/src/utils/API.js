@@ -59,6 +59,31 @@ export const getHome = () => {
     });
   };
 
+  export const getOnline = () => {
+    return fetch('/online', {
+      headers: {
+        'Content-Type': 'application/json',
+        
+      },
+    });
+  };
+  export const getVip = () => {
+    return fetch('/vip', {
+      headers: {
+        'Content-Type': 'application/json',
+        
+      },
+    });
+  };
+  export const postVip = () => {
+    return fetch('/vip', {
+      headers: {
+        'Content-Type': 'application/json',
+        
+      },
+    });
+  };
+
 // route to get menu
 
 export const getMenu = () => {
@@ -87,7 +112,7 @@ export const getReview = (reviews) => {
     });
 };
 export const createReview = (reviews) => {
-    return fetch('/api/reviews', {
+    return fetch('/menu/:id/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -95,10 +120,20 @@ export const createReview = (reviews) => {
       body: JSON.stringify(),
     });
   };
-  export const deleteReview = (review_Id) => {
-    return fetch(`/menu/:id/reviews/${review_Id}`, {
+  export const updateReview = (reviews) => {
+    return fetch('/menu/:id/reviews', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(),
+    });
+  };
+  export const deleteReview = (reviews) => {
+    return fetch(`/menu/:id/reviews`, {
       method: 'DELETE',
       headers: {
+        'Content-Type': 'application/json',
         //authorization: `Bearer ${token}`,
       },
     });

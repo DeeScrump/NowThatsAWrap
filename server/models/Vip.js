@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
-const vipMemberSchema = new Schema({
+const vipSchema = new Schema({
   firstName: {
     type: String,
     required: true,
@@ -28,7 +28,7 @@ const vipMemberSchema = new Schema({
 });
 
 // set up pre-save middleware to create password
-vipMemberSchema.pre('save', async function(next) {
+vipSchema.pre('save', async function(next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -38,10 +38,10 @@ vipMemberSchema.pre('save', async function(next) {
 });
 
 // compare the incoming password with the hashed password
-vipMemberSchema.methods.isCorrectPassword = async function(password) {
+vipSchema.methods.isCorrectPassword = async function(password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const VipMember = mongoose.model('VipMember', vipMemberSchema);
+const Vip = mongoose.model('Vip', vipSchema);
 
-module.exports = VipMember;
+module.exports = Vip;

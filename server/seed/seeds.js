@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const db = require('../models');
 //const { Category } = require('../models/Category');
+//const { Vip, Menu, Category } = require('../models');
 
 mongoose.connect('mongodb://localhost/nowthatsawrap', {
   useNewUrlParser: true,
@@ -379,13 +380,34 @@ const menu = [
   { name: 'drink' },
   { name: 'cocktails' },
   { name: 'dessert' }
+],
+
+vip = [
+  {
+    firstName: 'Pamela',
+    lastName: 'Washington',
+    email: 'pamela@testmail.com',
+    password: 'password12345',
+    // orders: [
+    //   {
+    //     menu: [menu[0]._id, menu[0]._id, menu[1]._id]
+    //   }
+    // ]
+  },
+  {
+    firstName: 'Elijah',
+    lastName: 'Holt',
+    email: 'eholt@testmail.com',
+    password: 'password12345'
+  },
+
 ]
 
 db.Menu.deleteMany({})
   .then(() => db.Menu.collection.insertMany(menu))
   .then((data) => {
-    console.log(' records inserted!');
-    process.exit(0);
+    console.log(' Menu seeded!');
+   // process.exit(0);
   })
   .catch((err) => {
     console.error(err);
@@ -406,3 +428,16 @@ db.Menu.deleteMany({})
     });
   // })
 
+  //  db.Vip.deleteMany()
+
+  // .then(() => db.Vip.collection.insertMany(vip)) 
+  // .then((data) => {
+  //   console.log('Vip Member Seeded!');
+  //  // Vip.create
+  // })
+  // .catch((err) => {
+  //   console.error(err);
+  //   process.exit(1);
+  // });
+  //await Vip.create(
+   //process.exit();
