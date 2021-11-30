@@ -4,7 +4,7 @@ const DeluxeOmelets = [
       title: 'Bacon Omelet',
       category: 'breakfast',
       price: 10.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4543821.jpg&w=1200&h=678&c=sc&poi=face&q=85',
       desc: `Bacon Slices and Bacon Crumbles, sauteed onions, sauteed pepper, diced tomatoes and shredded cheese`,
     },
     {
@@ -12,7 +12,7 @@ const DeluxeOmelets = [
       title: 'Chicken Omelet',
       category: 'breakfast',
       price: 10.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: 'https://www.ndtv.com/cooks/images/chicken.omellete.jpg',
       desc: `Chopped Chicken Breast, sauteed onions, peppers and mushrooms with shredded cheese`,
     },
     {
@@ -20,7 +20,7 @@ const DeluxeOmelets = [
       title: 'Turkey Sausage Omelet',
       category: 'breakfast',
       price: 10.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: 'https://www.mrshappyhomemaker.com/wp-content/uploads/blogger/-ACYaGvjXGhc/TWMSEwddUBI/AAAAAAAABU4/rMJKTRtm9zo/s1600/DSC_0186.JPG',
       desc: `Turkey Pan Sausage, sauteed onions, sauteed peppers and shredded cheese`,
     },
     {
@@ -28,7 +28,7 @@ const DeluxeOmelets = [
       title: 'Seafood Omelet',
       category: 'breakfast',
       price: 15.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: 'https://rubyzkitchen.files.wordpress.com/2012/09/2.jpg',
       desc: `Grilled Jumbo Shrimp and Imitation Crab Meat, sauteed onions, sauteed peppers and shredded cheese`,
     },
     {
@@ -36,7 +36,7 @@ const DeluxeOmelets = [
       title: 'Veggie Medley Omelet',
       category: 'breakfast',
       price: 15.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2F2017%2F01%2Fmain%2Fhalf-moon-browned-omelet.jpg%3Fitok%3DmGBP10Co',
       desc: `Sauteed Mushrooms, Sauteed Bell Peppers, Sauteed Onions, shredded carrots, mixed greens and shredded cheese`,
     },
     {
@@ -44,7 +44,7 @@ const DeluxeOmelets = [
       title: 'Philly Cheesesteak Omelet',
       category: 'breakfast',
       price: 17.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: 'https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/vegetarian-mile-high-omelets.jpg?fit=1200%2C879&ssl=1',
       desc: `USDA Choice Steak, sauteed onions, peppers, and mushrooms with mozzarella cheese`,
     },
     {
@@ -52,7 +52,7 @@ const DeluxeOmelets = [
       title: 'Surf & Turf Omelet',
       category: 'breakfast',
       price: 17.00,
-      img: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+      img: 'https://www.dianekochilas.com/wp-content/uploads/2020/07/ground-meat-omelet.jpg',
       desc: `USDA Choice Steak and Grilled Jumbo Shrimp, sauteed onions and shredded cheese`,
     },
   ];
