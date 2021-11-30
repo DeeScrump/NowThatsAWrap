@@ -1,6 +1,6 @@
 
 // import user model
-const { Menu } = require('../models');
+const { Menu, Reviews } = require('../models');
 
 menu = {
   // get a menu page with all menu items
@@ -30,7 +30,7 @@ menu = {
       }
       console.log('Request Id:', req.params.id);
 
-       res.json(singleMenuItem);
+       res.status(200).json(singleMenuItem);
     } catch (err) {
       console.log(err);
       return res.status(400).json(err);
@@ -39,7 +39,7 @@ menu = {
   // get all reviews
  getReviews: async function(req, res) {
   try{
-    console.log(req.params.id);
+    //console.log(req.params.id);
     const allReviews = await Menu.findById(req.params.id);
     
     res.status(200).json(allReviews.reviews);
@@ -52,44 +52,49 @@ if(!allReviews){
 
 },
 //  create review
-postReview: async function({ body }, res) {
-
-  const reviews = await Menu.create(body.reviews);
-
+postReview: async function(req, res) {
+console.log(req.body, req.params.id);
+  const reviews = await Menu.create(
+    {reviews: req.body.reviews},
+    { $addToSet: { reviews: req.body.reviews } },
+  
+  );
   if (!reviews) {
     return res.status(400).json({ message: 'Something is wrong!' });
   }
   
-  res.json(reviews.reviews);
+  res.status(200).json(reviews);
 
 },
 
 // update review
-updateReview: async function({ review, body }, res) {
-  console.log(review);
+updateReview: async function(req, res) {
+  //console.log(review);
+
   try {
     const updatedReview = await Menu.findOneAndUpdate(
-      { _id: review._id },
-      { $addToSet: { savedReviews: body } },
+      { _id: req.params.id },
+      
+      { $addToSet: { reviews: req.body.reviews } },
       { new: true }
     );
-    return res.json(updatedReview.reviews);
+    return res.json(updatedReview);
   } catch (err) {
     console.log(err);
     return res.status(400).json(err);
   }
 },
 // remove a review from savedReviews
-deleteReview: async function({ review, params }, res) {
+deleteReview: async function( req, res) {
   const updatedReview = await Menu.findOneAndUpdate(
-    { _id: review._id },
-    { $pull: { postReviews: { review_id: params.review_id } } },
+    { _id: req.params.id },
+    { $pull: { reviews: req.body.reviews } },
     { new: true }
   );
   if (!updatedReview) {
     return res.status(404).json({ message: "Couldn't find menu with this id!" });
   }
-  return res.json(updatedReview.reviews);
+  return res.json(updatedReview);
 }, 
 
 }

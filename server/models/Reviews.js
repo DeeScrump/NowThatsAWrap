@@ -6,10 +6,10 @@ let reviewSchema = new Schema(
         text: {
             type: String
         },
-        menu_id: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Menu'
-        }
+        // menu_id: {
+        //     type: mongoose.Schema.Types.ObjectId,
+        //     ref: 'Menu'
+        // }
     }
 );
 
