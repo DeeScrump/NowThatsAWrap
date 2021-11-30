@@ -1,7 +1,12 @@
-import React from 'react';
-import {Navbar, Nav} from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import {Navbar, Nav} from 'react-bootstrap';
 
-function NavBar({ currentPage, handlePageChange }) {
+function NavBar() {
+    const [click, setClick] = useState(false);
+    // const [dropdown, setDropdown] = useState(false);
+
+    const handleClick = () => setClick(!click)
 
     return(
         <Navbar className="navbar-fixed-top container-fluid" bg="dark" variant="dark" expand="md">
@@ -9,13 +14,49 @@ function NavBar({ currentPage, handlePageChange }) {
             <Navbar.Toggle className="me-1" />
             <Navbar.Collapse className="justify-content-center" >
                 <Nav> 
-                    <Nav.Link className={ currentPage === 'about' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('about')}><h3 className="mx-lg-4">About</h3></Nav.Link>
-                    <Nav.Link className={ currentPage === 'menu' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('menu')}><h3 className="mx-lg-4">Menu</h3></Nav.Link>
-                    <Nav.Link className={ currentPage === 'online' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('online')}><h3 className="mx-lg-4">Order Online</h3></Nav.Link>
-                    <Nav.Link className={ currentPage === 'events' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('events')}><h3 className="mx-lg-4">Private Events</h3></Nav.Link>
-                    <Nav.Link className={ currentPage === 'catering' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('catering')}><h3 className="mx-lg-4">Catering Events</h3></Nav.Link>
-                    <Nav.Link className={ currentPage === 'contact' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('contact')}><h3 className="mx-lg-4">Contact Us</h3></Nav.Link>            
-                    <Nav.Link className={ currentPage === 'vip' ? 'nav-link active' : 'nav-link' } onClick={() => handlePageChange('vip')}><h3 className="mx-lg-4">VIP Sign Up</h3></Nav.Link> 
+                    <ul className='d-flex justify-content-end align-items-end'>
+                        <li className='nav-link'>
+                            <Link to='/About' className='nav-link' onClick={handleClick}>
+                                About
+                            </Link>
+                        </li>
+                        <li className='nav-link
+                        '>
+                            <Link to='/Menu' className='nav-link' onClick={handleClick}>
+                                Menu
+                            </Link>
+                        </li>
+                        <li className='nav-link
+                        '>
+                            <Link to='/Online' className='nav-link' onClick={handleClick}>
+                                Online Orders
+                            </Link>
+                        </li>
+                        <li className='nav-link
+                        '>
+                            <Link to='/Events' className='nav-link' onClick={handleClick}>
+                                Private Events
+                            </Link>
+                        </li>
+                        <li className='nav-link
+                        '>
+                            <Link to='/Catering' className='nav-link' onClick={handleClick}>
+                                Catering Events
+                            </Link>
+                        </li>
+                        <li className='nav-link
+                        '>
+                            <Link to='/Contact' className='nav-link' onClick={handleClick}>
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li className='nav-link
+                        '>
+                            <Link to='/Vip' className='nav-link' onClick={handleClick}>
+                                VIP Members
+                            </Link>
+                        </li>
+                    </ul>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -9,7 +9,7 @@ function Online() {
     const styles = {
         headerPic: {
             height: '500px',
-            backgroundImage: `url(${delPic1})url(${deliveryPic})url(${delPic1})`,
+            backgroundImage: `url(${deliveryPic})`,
             backgroundPosition: 'center',
         },
         headerText: {

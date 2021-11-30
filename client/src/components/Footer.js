@@ -2,7 +2,7 @@ import React from "react";
 import {SiFacebook, SiInstagram,SiTwitter,SiYoutube} from 'react-icons/si';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
-const FooterPagePro = () => {
+const Footer = () => {
   return (
     <MDBFooter color="bg-dark" className="font-small text-white lighten-3 pt-4 mt-4">
       <MDBContainer className="text-center text-md-left">
@@ -62,4 +62,4 @@ const FooterPagePro = () => {
   );
 }
 
-export default FooterPagePro;
+export default Footer;

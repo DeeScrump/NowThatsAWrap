@@ -22,8 +22,12 @@
                         onMouseLeave={() => setHover(null)}
                     />
                     <FaStar className="star" 
+<<<<<<< HEAD
+                  
+=======
 <<<<<<< Updated upstream
                       
+>>>>>>> main
                         color={ratingValue <- (hover || rating ? "#ffc107" : "#e4e5e9")}
                         size={100}
 =======
