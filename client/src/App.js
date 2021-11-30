@@ -1,49 +1,38 @@
 import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import NavBar from './components/NavBar';
 import About from './components/About';
 import Menu from './components/Menu';
-import MenuItem from './components/MenuItem'
+import Online from './components/Online';
+import MenuItem from './components/MenuItem';
 import NavBar from './components/NavBar';
 import Events from './components/Events';
 import Contact from './components/Contact';
 import Catering from './components/Catering';
-import Footer from './components/Footer';
 import Vip from './components/Vip';
+import Footer from './components/Footer';
 // import StarRating from './components/StarRating';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState('about');
-
-  const renderPage =() => {
-    switch(currentPage){
-      case 'about':
-        return <About />;
-      case 'menu':
-        return <Menu />;
-      case 'menuItem':
-          return <MenuItem />;  
-      case 'events':
-        return <Events />;
-      case 'catering':
-        return <Catering />;        
-      case 'contact':
-        return <Contact />;
-      case 'vip':
-        return <Vip />;
-      default:
-        return <About />;
-    }
-  }
-
-  const handlePageChange = (page) => setCurrentPage(page);
-
-
   return (
-    <main>
-      <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
-      {renderPage()}
-      <Footer />
-    </main>
+    <Router>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<About />} />
+          <Route path="/About" element={<About />}/>
+          <Route path="/Menu" element={<Menu />}/>
+          <Route path="/Online" element={<Online />}/>
+          <Route path="/Events" element={<Events />}/>
+          <Route path="/Catering" element={<Catering />}/>
+          <Route path="/Contact" element={<Contact />}/>
+          <Route path="/Vip" element={<Vip />}/>
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
