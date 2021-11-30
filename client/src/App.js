@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import About from './components/About';
 import Menu from './components/Menu';
+import MenuItem from './components/MenuItem'
 import NavBar from './components/NavBar';
 import Events from './components/Events';
 import Contact from './components/Contact';
 import Catering from './components/Catering';
 import Footer from './components/Footer';
 import Vip from './components/Vip';
-import StarRating from './components/StarRating';
+// import StarRating from './components/StarRating';
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
         return <About />;
       case 'menu':
         return <Menu />;
+      case 'menuItem':
+          return <MenuItem />;  
       case 'events':
         return <Events />;
       case 'catering':
@@ -39,7 +42,6 @@ function App() {
     <main>
       <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
-      <StarRating />
       <Footer />
     </main>
   );

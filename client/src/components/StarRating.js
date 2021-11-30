@@ -22,8 +22,8 @@ const StarRating = () => {
                         onMouseLeave={() => setHover(null)}
                     />
                     <FaStar className="star" 
-                        {/* <- this should be greater than less than  */}
-                        color={ratingValue <- (hover || rating ? "#ffc107" : "#e4e5e9"}
+                  
+                        color={ratingValue <- (hover || rating ? "#ffc107" : "#e4e5e9")}
                         size={100}
                     />
                 </label>
