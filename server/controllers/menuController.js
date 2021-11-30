@@ -1,6 +1,6 @@
 
 // import user model
-const { Menu, Reviews } = require('../models');
+const { Menu, Review } = require('../models');
 
 menu = {
   // get a menu page with all menu items
@@ -54,6 +54,19 @@ if(!allReviews){
 //  create review
 postReview: async function(req, res) {
 console.log(req.body, req.params.id);
+  // try {
+  //   const review = new Review();
+  //   review.text = req.body.reviews;
+  //   review.save(err => {
+  //     if(err) return err;
+  //     return res.json({message: review})
+  //   })
+
+  //   res.status(200).json(newReview);
+  // } catch (err) {
+  //   return res.status(400).json({message: err});
+  // }
+
   const reviews = await Menu.create(
     {reviews: req.body.reviews},
     { $addToSet: { reviews: req.body.reviews } },

@@ -5,9 +5,9 @@ const Category = require('./Category');
 //const Order = require('./Order');
 //const Contact = require('./Contact.js');
 //const Catering = require('./Catering');
-//const Review = require('./Reviews');
+const Review = require('./Review');
 
-module.exports = { Menu, Category };
+module.exports = { Menu, Category, Review };
 
 
 // const VipMember = require('./VipMember');
