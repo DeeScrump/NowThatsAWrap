@@ -1,6 +1,5 @@
 import React from 'react';
 import deliveryPic from '../assets/images/deliveryPic.jpg';
-import delPic1 from '../assets/images/lilWrappyPng.png';
 import uberEats from '../assets/images/uberEats.png';
 import doorDash from '../assets/images/doorDash.png';
 

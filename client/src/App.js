@@ -5,7 +5,7 @@ import About from './components/About';
 import Menu from './components/Menu';
 import Online from './components/Online';
 import MenuItem from './components/MenuItem';
-import NavBar from './components/NavBar';
+import NavBar from './components/NaviBar';
 import Events from './components/Events';
 import Contact from './components/Contact';
 import Catering from './components/Catering';
