@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {Navbar, Nav} from 'react-bootstrap';
 
 function NavBar() {

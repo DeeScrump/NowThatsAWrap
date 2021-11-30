@@ -6,7 +6,6 @@ const { Reviews } = require('../models/Reviews');
 
 const router = express.Router();
 
-
 module.exports = {
 
 // get all reviews
