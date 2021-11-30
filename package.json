@@ -15,9 +15,6 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
-  },
-  "dependencies": {
-    "mdbreact": "^5.2.0",
-    "react-icons": "^4.3.1"
   }
+  
 }

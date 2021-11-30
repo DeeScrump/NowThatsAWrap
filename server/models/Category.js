@@ -7,9 +7,9 @@ const categorySchema = new Schema({
     type: String,
     trim: true
   },
-  // menuId: {
-  //   type: String,
-  // }
+  menuId: {
+    type: String,
+  }
   
 });
 
