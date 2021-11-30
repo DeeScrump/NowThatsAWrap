@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './components/NavBar';
 import About from './components/About';
 import Menu from './components/Menu';
 import Online from './components/Online';
