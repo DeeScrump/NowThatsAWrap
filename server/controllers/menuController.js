@@ -13,7 +13,7 @@ menu = {
       return res.status(400).json({ message: 'Cannot find menu!' });
     }
 
-    res.json(fullMenu);
+    res.status(200).json(fullMenu);
   }, 
 
   // get a single menu item 
