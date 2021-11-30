@@ -14,57 +14,23 @@ import Footer from './components/Footer';
 
 function App() {
 
-  // const [currentPage, setCurrentPage] = useState('about');
-
-  // const renderPage =() => {
-  //   switch(currentPage){
-  //     case 'about':
-  //       return <About />;
-  //     case 'menu':
-  //       return <Menu />;
-  //     case 'events':
-  //       return <Events />;
-  //     case 'catering':
-  //       return <Catering />;        
-  //     case 'contact':
-  //       return <Contact />;
-  //     case 'vip':
-  //       return <Vip />;
-  //     default:
-  //       return <About />;
-  //   }
-  // }
-
-  // const handlePageChange = (page) => setCurrentPage(page);
-
-
   return (
-    <Router basename='/'>
+    <Router>
       <div>
         <NavBar />
         <Routes>
-          <Route exact path="/about" component={About} />
-          <Route path="/About" component={About} />
-          <Route path="/Menu" component={Menu} />
-          <Route path="/Online" component={Online} />
-          <Route path="/Events" component={Events} />
-          <Route path="/Catering" component={Catering} />
-          <Route path="/Contact" component={Contact} />
-          <Route path="/Vip.js" component={Vip} />
+          <Route exact path="/" element={<About />} />
+          <Route path="/About" element={<About />}/>
+          <Route path="/Menu" element={<Menu />}/>
+          <Route path="/Online" element={<Online />}/>
+          <Route path="/Events" element={<Events />}/>
+          <Route path="/Catering" element={<Catering />}/>
+          <Route path="/Contact" element={<Contact />}/>
+          <Route path="/Vip" element={<Vip />}/>
         </Routes>
         <Footer />
       </div>
     </Router>
-
-
-
-
-    // <main>
-    //   <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
-    //   {renderPage()}
-    //   {/* <StarRating /> */}
-    //   <Footer />
-    // </main>
   );
 }
 
