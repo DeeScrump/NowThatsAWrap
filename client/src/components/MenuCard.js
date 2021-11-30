@@ -9,13 +9,13 @@ function MenuCard({item, handlePageChange}) {
     return (
       <>
         <Card className="menu-card">
-        <Card.Img variant="top" src={item.img} style={{"height" : "200px"}} />
+        <Card.Img variant="top" src={item.img} style={{"height" : "300px"}} />
         <Card.Body>
           <Card.Title>{item.title}</Card.Title>
           <Card.Subtitle>Price: ${item.price}.00</Card.Subtitle>
-          {/* <Card.Text>
+          <Card.Text>
             {item.desc}
-          </Card.Text> */}
+          </Card.Text>
           {/* validate user is a VIP member before they can leave a review Use CSS to hide button if no access */}
             <Link to="/about">Review</Link>
         </Card.Body>
