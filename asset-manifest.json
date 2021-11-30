@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d4254167.chunk.css",
+    "main.js": "/static/js/main.f1a4b613.chunk.js",
+    "main.js.map": "/static/js/main.f1a4b613.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.20bfe0ba.js",
+    "runtime-main.js.map": "/static/js/runtime-main.20bfe0ba.js.map",
+    "static/css/2.a75f5a2c.chunk.css": "/static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.03429f1a.chunk.js": "/static/js/2.03429f1a.chunk.js",
+    "static/js/2.03429f1a.chunk.js.map": "/static/js/2.03429f1a.chunk.js.map",
+    "static/js/3.2c0081de.chunk.js": "/static/js/3.2c0081de.chunk.js",
+    "static/js/3.2c0081de.chunk.js.map": "/static/js/3.2c0081de.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.a75f5a2c.chunk.css.map": "/static/css/2.a75f5a2c.chunk.css.map",
+    "static/css/main.d4254167.chunk.css.map": "/static/css/main.d4254167.chunk.css.map",
+    "static/js/2.03429f1a.chunk.js.LICENSE.txt": "/static/js/2.03429f1a.chunk.js.LICENSE.txt",
+    "static/media/NTAW BusinessCard1.9433c3b2.jpg": "/static/media/NTAW BusinessCard1.9433c3b2.jpg",
+    "static/media/NTAW BusinessCard2.7728d47a.jpg": "/static/media/NTAW BusinessCard2.7728d47a.jpg",
+    "static/media/aboutHeader.6ce3a9a4.jpg": "/static/media/aboutHeader.6ce3a9a4.jpg",
+    "static/media/cateringevent2.139c759b.jpg": "/static/media/cateringevent2.139c759b.jpg",
+    "static/media/chefHaiven.adb35bbf.jpg": "/static/media/chefHaiven.adb35bbf.jpg",
+    "static/media/contactme.31264165.jpg": "/static/media/contactme.31264165.jpg",
+    "static/media/deliveryPic.74b30cd8.jpg": "/static/media/deliveryPic.74b30cd8.jpg",
+    "static/media/doorDash.f56fd64f.png": "/static/media/doorDash.f56fd64f.png",
+    "static/media/lilWrappyPng.8ce8c948.png": "/static/media/lilWrappyPng.8ce8c948.png",
+    "static/media/logo.03fff891.jpg": "/static/media/logo.03fff891.jpg",
+    "static/media/patioImage.8dd77b45.jpg": "/static/media/patioImage.8dd77b45.jpg",
+    "static/media/poster.e9fcb665.jpg": "/static/media/poster.e9fcb665.jpg",
+    "static/media/privateevent2.345727fb.jpg": "/static/media/privateevent2.345727fb.jpg",
+    "static/media/uberEats.10d6e221.png": "/static/media/uberEats.10d6e221.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20bfe0ba.js",
+    "static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.03429f1a.chunk.js",
+    "static/css/main.d4254167.chunk.css",
+    "static/js/main.f1a4b613.chunk.js"
+  ]
+}
