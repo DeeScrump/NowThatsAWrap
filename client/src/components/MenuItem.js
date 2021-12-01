@@ -7,7 +7,7 @@ import MenuCard from '../components/MenuCard';
 import { getReview, createReview, updateReview, deleteReview } from '../utils/API';
 // import StarRating from "./StarRating";
 
-const MenuItem = () => {
+const MenuItem = (item) => {
 
   // set initial form state
   const [userReview, setUserReview] = useState([]);
@@ -17,22 +17,22 @@ const MenuItem = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   
-  const url = 'http://localhost:3001/'
+  // const url = 'http://localhost:3001/'
 
-  useEffect(() => {
-    componentDidMount();
-  }, [])
+  // useEffect(() => {
+  //   componentDidMount();
+  // }, [])
 
-  const componentDidMount = () => {
-   axios.get(`${url}api/menu/:id/reviews`)
-    // GET request using axios with error handling
-    .then(res => {
-      const userReview = res.data;  
-      console.log(res.data)
-      setUserReview(userReview);
-      return res.data
-    });
-  }
+  // const componentDidMount = () => {
+  //  axios.get(`${url}api/menu/:id/reviews`)
+  //   // GET request using axios with error handling
+  //   .then(res => {
+  //     const userReview = res.data;  
+  //     console.log(res.data)
+  //     setUserReview(userReview);
+  //     return res.data
+  //   });
+  // }
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -56,18 +56,18 @@ const MenuItem = () => {
 
   return (
     <>
-      <div>
+      {/* <div>
         <Card className="menu-card">
-          <Card.Img variant="top" src={MenuCard.image} style={{ height: "200px" }} />
+          <Card.Img variant="top" src={item.image} style={{ height: "200px" }} />
           <Card.Body>
-            <Card.Title>{MenuCard.title}</Card.Title>
-            <Card.Text>{MenuCard.description}</Card.Text>
-            <Card.Subtitle>Price: ${MenuCard.price}</Card.Subtitle>
+            <Card.Title>{item.title}</Card.Title>
+            <Card.Text>{item.description}</Card.Text>
+            <Card.Subtitle>Price: ${item.price}</Card.Subtitle>
 
-            {/* <StarRating /> */}
+            // <StarRating />
           </Card.Body>
         </Card>
-      </div>
+      </div> */}
       <div className="container" >
         <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
           {/* show alert if server response is bad */}

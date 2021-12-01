@@ -9,7 +9,7 @@ import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import MenuCard from './MenuCard';
-import MenuItem from './MenuItem';
+// import MenuItem from './MenuItem';
 import '../pages/style.css';
 
 function Menu() {
@@ -69,17 +69,14 @@ function Menu() {
         <h1 style={styles.headerText}>Menu</h1>
       </header>
       <Container>
-        <h2 className="menu-section">Breakfast</h2>
+        {/* <h2 className="menu-section">Breakfast</h2> */}
         <Row>
           
           {/* <h3 className="menu-title">Breakfast Quesadillas</h3> */}
           <div className="menu-card-list">
             {/* {BreakfastQuesadillas.map((item) => ( */}
             {menuData.map((item) => (
-              <div>
-                <MenuCard key={item.id} item={item} />
-                <MenuItem key={item.id} item={item} />
-              </div>
+              <MenuCard key={item.id} item={item} />
             ))}
           </div>
           
