@@ -54,6 +54,9 @@ const MenuItem = (item) => {
     });
   };
 
+
+const MenuItem = ({ item, handlePageChange }) => {
+
   return (
     <>
       {/* <div>
@@ -67,6 +70,7 @@ const MenuItem = (item) => {
             // <StarRating />
           </Card.Body>
         </Card>
+
       </div> */}
       <div className="container" >
         <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
