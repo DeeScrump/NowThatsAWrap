@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# NOW THAT'S A WRAP
+## Project Description 
+Haiven Kornbluth is the culinary genius behind the movement of Now That’s A Wrap. He is a visionary that has traveled the globe and explored diverse dynamics with the culinary world. With a vigorous six years in the restaurant industry, he knew that his style, technique and vision was too untamed for a typical restaurant Although he pays homage to every skill and lesson developed by his mentors, he knew it was time to venture off on his own in 2016. He took a simple concept of a healthy wrap and added the “Haiven” flavor to each bite. His business, Now That’s A Wrap, became a product worth buzzing about. While building his business from the ground, he was able to complete his culinary education at the elite Auguste Escoffier Culinary Arts school, earning his Culinary Arts Diploma in 2018 and earned an Associates of Science Degree in Culinary Arts in 2020.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Story
+As a person interested in eating out and various restaurants
+I want to be able to get up-to-date information regarding a specific restaurant via their online website 
 
-## Available Scripts
+So that I can have clear expectations of their current location, menu items, special events and VIP offers if any
 
-In the project directory, you can run:
+When you view a standard restaurant page, you find the information and menu times, but very little information regarding people’s thoughts about the location and/or menu items.  What if you were able to make comments, add reviews about each menu item for your favorite restaurants.
+## Acceptance Criteria
+* Use React for the front end.
+* Use GraphQL with a Node.js and Express.js server. OR using express API routes
+* Use MongoDB and the Mongoose ODM for the database.
+* Use queries and mutations for retrieving, adding, updating, and deleting data.
+* Be deployed using Heroku (with data).
+* Have a polished UI.
+* Be responsive.
+* Be interactive (i.e., accept and respond to user input).
+* Include authentication (JWT). 
+* Protect sensitive API key information on the server.
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
 
-### `npm start`
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. Run npm install. You will need to create a database. Run `npm run seed` to seed data to your database so that you can test your routes. To execute the front-end you will need to type in `npm start`. To run the server you will need to type in `npm run deploy`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
+- React 
+- Node JS and Express JS servers
+- Bootstrap
+- Axios 
+- API - Mailchimp
+- MongoDB
+- Heroku
+- Bcrypt
+- MDB React
+- Mongoose
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Team 
+Bindu Vaghela
+Tammy Gagliano
+Dwight Kornbluth
+Landrell Williams
+Tom Lazore
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ScreenShot
+![Now That's A Wrap](/screenshot.png)
