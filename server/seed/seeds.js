@@ -15,7 +15,7 @@ const menu = [
         title: 'Veggie Medley Wrap',
         description:
           'Sauteed Mushrooms, sauteed bell peppers, sauteed onions, shredded carrots, mixed greens, two eggs, shredded cheese and chipotle ranch sauce served in a 12" tortilla wrap.',
-        image: '/client/public/assets/images/IMG-20211122-WA0037.jpg',
+        image: require('/client/public/assets/images/IMG-20211122-WA0037.jpg'),
         price: 13.00,
         category: 'breakfast',
         reviews: " asdfghhdh",

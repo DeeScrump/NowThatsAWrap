@@ -7,7 +7,7 @@ import MenuCard from '../components/MenuCard';
 import { getReview, createReview, updateReview, deleteReview } from '../utils/API';
 // import StarRating from "./StarRating";
 
-const MenuItem = (item) => {
+function MenuItem ({ item, handlePageChange }) {
 
   // set initial form state
   const [userReview, setUserReview] = useState([]);
@@ -17,22 +17,22 @@ const MenuItem = (item) => {
   const [showAlert, setShowAlert] = useState(false);
 
   
-  // const url = 'http://localhost:3001/'
+  const url = 'http://localhost:3001/'
 
-  // useEffect(() => {
-  //   componentDidMount();
-  // }, [])
+  useEffect(() => {
+    componentDidMount();
+  }, [])
 
-  // const componentDidMount = () => {
-  //  axios.get(`${url}api/menu/:id/reviews`)
-  //   // GET request using axios with error handling
-  //   .then(res => {
-  //     const userReview = res.data;  
-  //     console.log(res.data)
-  //     setUserReview(userReview);
-  //     return res.data
-  //   });
-  // }
+  const componentDidMount = () => {
+   axios.get(`${url}api/menu/:id/reviews`)
+    // GET request using axios with error handling
+    .then(res => {
+      const userReview = res.data;  
+      console.log(res.data)
+      setUserReview(userReview);
+      return res.data
+    });
+  }
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;

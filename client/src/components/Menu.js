@@ -58,7 +58,8 @@ function Menu() {
       console.log(res.data)
       setMenuData(menuData);
       return res.data
-    });
+    })
+    .catch(error => console.error(`Error: ${error}`));
   }
 
 
@@ -79,52 +80,7 @@ function Menu() {
               <MenuCard key={item.id} item={item} />
             ))}
           </div>
-          
         </Row>
-
-
-        
-        {/* <Row>
-          <h3 className="menu-title">Breakfast Wraps</h3>
-          <div className="menu-card-list">
-            {BreakfastWraps.map((item) => (
-              <MenuCard key={item.id} item={item} />
-            ))}
-          </div>
-        </Row>
-        <Row>
-          <h3 className="menu-title">Deluxe Omelets</h3>
-          <div className="menu-card-list">
-            {DeluxeOmelets.map((item) => (
-              <MenuCard key={item.id} item={item} />
-            ))}
-          </div>
-        </Row>
-        <h2 className="menu-section">Lunch</h2>
-        <Row>
-          <h3 className="menu-title">Chicken Wraps</h3>
-          <div className="menu-card-list">
-            {ChickenWraps.map((item) => (
-              <MenuCard key={item.id} item={item} />
-            ))}
-          </div>
-        </Row>
-        <Row>
-          <h3 className="menu-title">Seafood Wraps</h3>
-          <div className="menu-card-list">
-            {SeafoodWraps.map((item) => (
-              <MenuCard key={item.id} item={item} />
-            ))}
-          </div>
-        </Row>
-        <Row>
-          <h3 className="menu-title">Vegan Wraps</h3>
-          <div className="menu-card-list">
-            {VeganWraps.map((item) => (
-              <MenuCard key={item.id} item={item} />
-            ))}
-          </div>
-        </Row> */}
       </Container>
     </>
   ); 
