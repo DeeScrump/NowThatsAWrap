@@ -3,7 +3,7 @@ import '../pages/style.css';
 import Card from 'react-bootstrap/Card';
 import Menu from '../components/Menu';
 import Button from 'react-bootstrap/Button';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function MenuCard({item, handlePageChange}) {
     return (
@@ -17,7 +17,7 @@ function MenuCard({item, handlePageChange}) {
             {item.desc}
           </Card.Text>
           {/* validate user is a VIP member before they can leave a review Use CSS to hide button if no access */}
-            <Link to="/about">Review</Link>
+            <Link to="/MenuItem">Review</Link>
         </Card.Body>
       </Card>
       </>

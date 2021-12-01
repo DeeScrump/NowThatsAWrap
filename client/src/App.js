@@ -23,6 +23,7 @@ function App() {
           <Route exact path="/" element={<About />} />
           <Route path="/About" element={<About />}/>
           <Route path="/Menu" element={<Menu />}/>
+          <Route path="/MenuItem" element={<MenuItem />}/>
           <Route path="/Online" element={<Online />}/>
           <Route path="/Events" element={<Events />}/>
           <Route path="/Catering" element={<Catering />}/>

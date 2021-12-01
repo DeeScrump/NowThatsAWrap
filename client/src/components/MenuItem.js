@@ -3,7 +3,7 @@ import "../pages/style.css";
 import Card from "react-bootstrap/Card";
 import StarRating from "./StarRating";
 
-const MenuItem = ({ item, rating, setRating }) => {
+const MenuItem = ({ item, handleSubmit, rating, setRating }) => {
   return (
     <>
       <div>
@@ -18,7 +18,8 @@ const MenuItem = ({ item, rating, setRating }) => {
         </Card>
       </div>
       <div>
-        <form onSubmit={this.onFormSubmit}>
+      <form onSubmit={{handleSubmit}}>
+        <label for="name">Review</label>
           <label for="name">Review</label>
           <textarea
             placeholder="Add your review here"
@@ -27,6 +28,7 @@ const MenuItem = ({ item, rating, setRating }) => {
             id="review"
             value=""
           />
+          <br/>
           <label className="review-label">Rating</label>
           <StarRating setRating={setRating} rating={rating} />
           <button type="submit">Submit</button>
