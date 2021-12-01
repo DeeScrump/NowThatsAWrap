@@ -39,7 +39,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Team 
 Bindu Vaghela
-Tammy Gagliano
+Tammy A. Gagliano
 Dwight Kornbluth
 Landrell Williams
 Tom Lazore
