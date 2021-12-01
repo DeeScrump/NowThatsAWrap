@@ -46,3 +46,7 @@ Tom Lazore
 
 ## ScreenShot
 ![Now That's A Wrap](/screenshot.png)
+
+## Deployed 
+- HEROKU - https://blooming-temple-95340.herokuapp.com/
+- GITHUB - https://github.com/DeeScrump/NowThatsAWrap
