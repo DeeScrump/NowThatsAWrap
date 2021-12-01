@@ -6,8 +6,12 @@ menu = {
   // get a menu page with all menu items
   getMenu: async function(req, res) {
     const fullMenu = await Menu.find({
+      // db.Menu()
+      // .then(fullMenu => {
+      //   res.json(fullMenu)
+      });
  
-    });
+
 
     if (!fullMenu) {
       return res.status(400).json({ message: 'Cannot find menu!' });
