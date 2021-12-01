@@ -1,5 +1,5 @@
 const express = require('express');
-
+const cors = require('cors');
 const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
@@ -16,7 +16,7 @@ const app = express();
 // });
 
 //server.applyMiddleware({ app });
-
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
