@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-// import BreakfastQuesadillas from "../pages/breakfast/BreakfastQuesadillas";
-// import BreakfastWraps from "../pages/breakfast/BreakfastWraps";
-// import DeluxeOmelets from "../pages/breakfast/DeluxeOmelets";
-// import ChickenWraps from "../pages/lunch/ChickenWraps";
-// import SeafoodWraps from "../pages/lunch/SeafoodWraps";
-// import VeganWraps from "../pages/lunch/VeganWraps";
+import BreakfastQuesadillas from "../pages/breakfast/BreakfastQuesadillas";
+import BreakfastWraps from "../pages/breakfast/BreakfastWraps";
+import DeluxeOmelets from "../pages/breakfast/DeluxeOmelets";
+import ChickenWraps from "../pages/lunch/ChickenWraps";
+import SeafoodWraps from "../pages/lunch/SeafoodWraps";
+import VeganWraps from "../pages/lunch/VeganWraps";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import MenuCard from './MenuCard';
@@ -70,17 +70,69 @@ function Menu() {
         <h1 style={styles.headerText}>Menu</h1>
       </header>
       <Container>
-        {/* <h2 className="menu-section">Breakfast</h2> */}
-        <Row>
+        <h2 className="menu-section">Breakfast</h2>
+        {/* <Row> */}
           
-          {/* <h3 className="menu-title">Breakfast Quesadillas</h3> */}
-          <div className="menu-card-list">
+          <h3 className="menu-title">Breakfast Quesadillas</h3>
+          {/* <div className="menu-card-list"> */}
             {/* {BreakfastQuesadillas.map((item) => ( */}
-            {menuData.map((item) => (
+            {/* {menuData.map((item) => (
               <MenuCard key={item.id} item={item} />
             ))}
-          </div>
-        </Row>
+          </div> */}
+        {/* </Row> */}
+
+        <Row>
+        {/*<a className="menu-body" href="../pages/breakfast">*/}
+        {/* <h3 className="menu-title">Breakfast Quesadillas</h3> */}
+        <div className="menu-card-list">
+          {BreakfastQuesadillas.map((item) => (
+            <MenuCard key={item.id} item={item} />
+          ))}
+        </div>
+        
+      </Row>
+      <Row>
+        <h3 className="menu-title">Breakfast Wraps</h3>
+        <div className="menu-card-list">
+          {BreakfastWraps.map((item) => (
+            <MenuCard key={item.id} item={item} />
+          ))}
+        </div>
+      </Row>
+      <Row>
+        <h3 className="menu-title">Deluxe Omelets</h3>
+        <div className="menu-card-list">
+          {DeluxeOmelets.map((item) => (
+            <MenuCard key={item.id} item={item} />
+          ))}
+        </div>
+      </Row>
+      <h2 className="menu-section">Lunch</h2>
+      <Row>
+        <h3 className="menu-title">Chicken Wraps</h3>
+        <div className="menu-card-list">
+          {ChickenWraps.map((item) => (
+            <MenuCard key={item.id} item={item} />
+          ))}
+        </div>
+      </Row>
+      <Row>
+        <h3 className="menu-title">Seafood Wraps</h3>
+        <div className="menu-card-list">
+          {SeafoodWraps.map((item) => (
+            <MenuCard key={item.id} item={item} />
+          ))}
+        </div>
+      </Row>
+      <Row>
+        <h3 className="menu-title">Vegan Wraps</h3>
+        <div className="menu-card-list">
+          {VeganWraps.map((item) => (
+            <MenuCard key={item.id} item={item} />
+          ))}
+        </div>
+      </Row>
       </Container>
     </>
   ); 
